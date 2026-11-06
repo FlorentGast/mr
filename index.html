@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Français langue étrangère</title>
+<style>
+  /* Pour changer les couleurs, modifiez uniquement ces variables */
+  :root {
+    --encre: #1d2b4f;      /* texte */
+    --ligne: #cfd9ec;      /* lignes du cahier */
+    --marge: #c9453b;      /* trait rouge de la marge */
+    --discret: #5b6785;    /* descriptions */
+    --l: 2rem;             /* hauteur d'une ligne du cahier */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #eef1f7;
+    color: var(--encre);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+  }
+  .cahier {
+    max-width: 44rem;
+    margin: 2rem auto;
+    padding: var(--l) 1.5rem var(--l) 4.5rem;
+    background-color: #fff;
+    background-image:
+      linear-gradient(to right, transparent 3.2rem, var(--marge) 3.2rem, var(--marge) calc(3.2rem + 1px), transparent calc(3.2rem + 1px)),
+      repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--l) - 1px), var(--ligne) calc(var(--l) - 1px), var(--ligne) var(--l));
+    background-position: 0 0, 0 var(--l);
+    box-shadow: 0 1px 4px rgba(29, 43, 79, .15);
+    line-height: var(--l);
+  }
+  h1 { font-size: 2rem; line-height: calc(var(--l) * 2); margin: 0; font-weight: 700; }
+  .sous-titre { margin: 0 0 var(--l); color: var(--discret); font-style: italic; }
+  h2 { font-size: 1.2rem; line-height: var(--l); margin: var(--l) 0 0; }
+  p { margin: 0; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin: 0; }
+  a { color: var(--encre); text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 700; }
+  a:hover { color: var(--marge); }
+  a:focus-visible { outline: 2px solid var(--marge); outline-offset: 2px; }
+  .note { color: var(--discret); font-size: .95rem; }
+  footer { margin-top: var(--l); }
+  @media (max-width: 36rem) {
+    .cahier { margin: 0; padding-left: 3.6rem; padding-right: 1rem; }
+    .cahier { background-image:
+      linear-gradient(to right, transparent 2.4rem, var(--marge) 2.4rem, var(--marge) calc(2.4rem + 1px), transparent calc(2.4rem + 1px)),
+      repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--l) - 1px), var(--ligne) calc(var(--l) - 1px), var(--ligne) var(--l)); }
+  }
+</style>
+</head>
+<body>
+<main class="cahier">
+
+  <!-- TITRE : modifiez ces deux lignes -->
+  <h1>Français langue étrangère</h1>
+  <p class="sous-titre">Fiches et exercices pour mes élèves</p>
+
+  <p>Bienvenue ! Choisissez une fiche pour commencer.</p>
+
+  <!-- NIVEAU : copiez un bloc h2 + ul pour ajouter un niveau -->
+  <h2>Niveau A1</h2>
+  <ul>
+    <!-- Chaque lien pointe vers un fichier du même dépôt -->
+    <li><a href="lecon-1.html">Se présenter</a> <span class="note">salutations, nom, nationalité</span></li>
+    <li><a href="lecon-2.html">Les nombres et l'heure</a> <span class="note">de 0 à 100</span></li>
+  </ul>
+
+  <h2>Niveau A2</h2>
+  <ul>
+    <li><a href="lecon-3.html">Au restaurant</a> <span class="note">commander, demander l'addition</span></li>
+    <li><a href="lecon-4.html">Parler de ses habitudes</a> <span class="note">le présent et les verbes pronominaux</span></li>
+  </ul>
+
+  <h2>Niveau B1</h2>
+  <ul>
+    <li><a href="lecon-5.html">Raconter un souvenir</a> <span class="note">passé composé et imparfait</span></li>
+  </ul>
+
+  <h2>Ressources</h2>
+  <ul>
+    <li><a href="https://www.tv5monde.com/" target="_blank" rel="noopener">TV5Monde</a> <span class="note">vidéos et exercices</span></li>
+    <li><a href="https://www.lemonde.fr/" target="_blank" rel="noopener">Le Monde</a> <span class="note">articles pour lire en français</span></li>
+  </ul>
+
+  <footer class="note">
+    <p>Professeur : votre nom</p>
+    <p>Dernière mise à jour : novembre 2026</p>
+  </footer>
+
+</main>
+</body>
+</html>
